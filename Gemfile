@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'devise'
+gem 'faker'
 gem 'jbuilder', '~> 2.5'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.0'
@@ -13,7 +14,9 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  gem 'byebug', platform: :mri
+  gem 'byebug'
+  gem 'database_cleaner'
+  gem 'pry'
   gem 'rspec-rails', '~> 3.5'
 end
 
