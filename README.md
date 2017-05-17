@@ -1,24 +1,15 @@
-# README
+# My Fave Food
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+TODO: Fill this in.
 
-Things you may want to cover:
+## Usage
 
-* Ruby version
+TODO: Fill this in.
 
-* System dependencies
+## Contributing ##
 
-* Configuration
+Bug reports and pull requests are welcome on GitHub at https://github.com/itzsaga/my-fave-food. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://github.com/itzsaga/my-fave-food/blob/master/CONTRIBUTING.md) code of conduct.
 
-* Database creation
+## License ##
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The gem is available as open source under the terms of the [MIT License](https://github.com/itzsaga/my-fave-food/blob/master/LICENSE).
