@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MyFaveFood</title>
+    <title>My Fave Food</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
   </head>
 
   <body>
+    <%= render 'layouts/messages' %>
     <%= yield %>
   </body>
 </html>
