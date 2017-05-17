@@ -2,7 +2,19 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   before(:each) do
-    @user = User.first
+    @user = User.create(
+        name: 'John Smith',
+        email: 'john@smith.com',
+        password: Faker::Internet.password
+    )
+  end
+
+  it 'has an name' do
+    expect(@user.name).to eq('John Smith')
+  end
+
+  it 'has an email' do
+    expect(@user.email).to eq('john@smith.com')
   end
 
   it 'has many places' do
@@ -12,7 +24,7 @@ RSpec.describe User, type: :model do
 
   it 'has many items through places' do
     @user.places.create
-    @user.places.first.items.create
+    @user.places.last.items.create
     expect(@user.items.count).to eq(1)
   end
 
