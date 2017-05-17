@@ -1,10 +1,12 @@
 # My Fave Food
 
-TODO: Fill this in.
+TODO: Update this.
+This app will allow you to keep a record of your favorite items (food & beverage) at any place you choose.
 
 ## Usage
 
-TODO: Fill this in.
+TODO: Update this with images/gifs.  
+Sign up with a valid email and password then add your first place. After that add whatever items you tried along with a rating (1-5) and any notes you'd like to remember.
 
 ## Contributing ##
 
