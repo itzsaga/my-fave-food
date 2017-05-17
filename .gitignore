@@ -80,3 +80,4 @@ config/initializers/secret_token.rb
 ## Environment normalization:
 /.bundle/
 /lib/bundler/man/
+/config/secrets.yml
