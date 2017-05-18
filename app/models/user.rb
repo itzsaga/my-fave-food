@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_many :places
   has_many :items, through: :places
+
+  validates :name, presence: true
 end
