@@ -1,12 +1,34 @@
-Authentication:
-- [ ] Facebook Omniauth  
-- [ ] GitHub Omniauth
-- [ ] Google Omniauth
+# Todo #
 
-Partials:
-- [ ] Navbar logged in
-- [ ] Navbar logged out
-- [ ] Style messages properly
-
-Forms:
-- [ ] Add "Name" to sign up
+- **Authentication**
+  - [ ] Facebook Omniauth  
+  - [ ] GitHub Omniauth
+  - [ ] Google Omniauth
+- **Partials**
+  - [x] Navbar logged in
+  - [x] Navbar logged out
+  - [x] Style messages properly
+  - User name dropdown when logged in:
+    - [ ] My profile
+    - [ ] Edit
+    - [ ] Log out
+    - [ ] Align right
+- **Forms**
+  - User Sign up
+  - [x] Add "Name"
+  - User Edit:
+  - [x] Add "Name"
+  - Place Create
+  - [ ] _Need_
+  - Place Edit
+  - [ ] _Need_
+  - Item Create
+  - [ ] _Need_
+  - Item Edit
+  - [ ] _Need_
+- **Validations**
+- [x] User model
+- [ ] Place model
+- [ ] Item model
+- **Others**
+- [ ] spec.md complete?
