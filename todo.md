@@ -28,7 +28,7 @@
   - [ ] _Need_
 - **Validations**
 - [x] User model
-- [ ] Place model
-- [ ] Item model
+- [x] Place model
+- [x] Item model
 - **Others**
 - [ ] spec.md complete?
