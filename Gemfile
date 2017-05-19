@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'devise'
-gem 'faker'
+gem 'font-awesome-rails'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'omniauth-facebook'
@@ -20,6 +20,7 @@ gem 'uglifier', '>= 1.3.0'
 group :development, :test do
   gem 'byebug'
   gem 'database_cleaner'
+  gem 'faker'
   gem 'pry'
   gem 'rspec-rails', '~> 3.5'
 end
