@@ -1,9 +1,12 @@
 # Todo #
 
 - **Authentication**
-  - [x] Facebook Omniauth  
+  - [x] Facebook Omniauth
+    - [ ] Button w/ FontAwesome Icon
   - [ ] GitHub Omniauth
+    - [ ] Button w/ FontAwesome Icon
   - [ ] Google Omniauth
+    - [ ] Button w/ FontAwesome Icon
 - **Partials**
   - [x] Navbar logged in
   - [x] Navbar logged out
