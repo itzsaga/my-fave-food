@@ -1,7 +1,7 @@
 # Todo #
 
 - **Authentication**
-  - [ ] Facebook Omniauth  
+  - [x] Facebook Omniauth  
   - [ ] GitHub Omniauth
   - [ ] Google Omniauth
 - **Partials**
