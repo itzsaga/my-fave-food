@@ -1,8 +1,3 @@
 <div><h1>Your places:</h1></div>
 
-<% if @places != [] %>
-<%= render 'places/index' %>
-<% else %>
-    <div><h3>You have not added any places yet.</h3></div>
-    <div><%= button_to 'Add Your First Place', new_place_path, class: 'btn btn-primary', method: :get %></div>
-<% end %>
+<%= render 'places/index', places: @places %>
