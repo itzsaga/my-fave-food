@@ -1,6 +1,7 @@
 class PlacesController < ApplicationController
   before_action :authenticate_user!
   before_action :all_items, only: %i[new create edit update]
+  before_action :current_place, only: [:update]
 
   def index
     @places = Place.all
@@ -21,7 +22,7 @@ class PlacesController < ApplicationController
   end
 
   def show
-    if @place = Place.find_by(id: params[:id])
+    if current_place
       @items = @place.items
       render :show
     else
@@ -30,7 +31,7 @@ class PlacesController < ApplicationController
   end
 
   def edit
-    if @place = Place.find_by(id: params[:id])
+    if current_place
       @place.items.build
       render :edit
     else
@@ -39,7 +40,6 @@ class PlacesController < ApplicationController
   end
 
   def update
-    @place = Place.find_by(id: params[:id])
     if @place.update(place_params)
       redirect_to @place
     else
@@ -55,5 +55,9 @@ class PlacesController < ApplicationController
 
   def all_items
     @items = current_user.items
+  end
+
+  def current_place
+    @place = Place.find_by(id: params[:id])
   end
 end
