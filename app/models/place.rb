@@ -2,14 +2,14 @@ class Place < ApplicationRecord
   belongs_to :user
   has_many :place_items
   has_many :items, through: :place_items
-  accepts_nested_attributes_for :items
+  # accepts_nested_attributes_for :items
 
   validates :name, presence: true
 
-  def items_attributes=(item)
-    item.each do |key, val|
-      self.items << Item.find_or_create_by(name: val[:name], rating: val[:rating], notes: val[:notes])
-      self.items.update(val)
+  def items_attributes=(items_attributes)
+    items_attributes.values.each do |item_attribute|
+      item = Item.find_or_create_by(item_attribute)
+      self.items << item if item.persisted?
     end
   end
 end
