@@ -11,9 +11,25 @@ class ItemsController < ApplicationController
     @item = @place.items.build
   end
 
+  def create
+    @item = Item.new(item_params)
+    @item.place_ids = params[:place_id]
+    @place = Place.find_by(id: params[:place_id])
+    if @item.save
+      redirect_to @item
+    else
+      render :new
+    end
+
+  end
+
+  def show
+    @item = Item.find_by(id: params[:id])
+  end
+
   private
 
   def item_params
-    params.require(:item).permit(:name, :rating, :notes, :place_id)
+    params.require(:item).permit(:name, :rating, :notes, place_id:[])
   end
 end
