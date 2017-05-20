@@ -1,5 +1,5 @@
 class PlacesController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, :all_items
 
   def index
     @places = Place.all
@@ -8,12 +8,10 @@ class PlacesController < ApplicationController
   def new
     @place = Place.new
     @place.items.build
-    @items = Item.all
   end
 
   def create
     @place = Place.new(place_params)
-    @items = Item.all
     if @place.save
       redirect_to @place
     else
@@ -33,7 +31,6 @@ class PlacesController < ApplicationController
   def edit
     if @place = Place.find_by(id: params[:id])
       @place.items.build
-      @items = Item.all
       render :edit
     else
       redirect_to places_path
@@ -42,7 +39,6 @@ class PlacesController < ApplicationController
 
   def update
     @place = Place.find_by(id: params[:id])
-    @items = Item.all
     if @place.update(place_params)
       redirect_to @place
     else
@@ -54,5 +50,9 @@ class PlacesController < ApplicationController
 
   def place_params
     params.require(:place).permit(:name, :address, :city, :state, :zip_code, :user_id, item_ids:[], items_attributes: %i[name rating notes])
+  end
+
+  def all_items
+    @items = current_user.items
   end
 end
