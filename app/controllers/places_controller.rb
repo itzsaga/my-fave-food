@@ -1,5 +1,6 @@
 class PlacesController < ApplicationController
-  before_action :authenticate_user!, :all_items
+  before_action :authenticate_user!
+  before_action :all_items, only: %i[new create edit update]
 
   def index
     @places = Place.all
