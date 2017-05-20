@@ -29,12 +29,13 @@
   - [x] Working form
   - [x] Add error messages
   - [ ] Error messages for nested if partially filled in
-  - [ ] Include delete
+  - Place Show
+  - [ ] Includes delete button
   - [ ] Delete destroys all associated items
-  - Item Create
-  - [ ] _Need_
-  - Item Edit
-  - [ ] _Need_
+  - Item New
+  - [x] When nested associates with correct place
+  - Item Show
+  - [ ] Includes delete button
 - **Validations**
 - [x] User model
 - [x] Place model
