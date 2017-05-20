@@ -32,6 +32,8 @@ class PlacesController < ApplicationController
 
   def edit
     if @place = Place.find_by(id: params[:id])
+      @place.items.build
+      @items = Item.all
       render :edit
     else
       redirect_to places_path
