@@ -5,5 +5,9 @@ Rails.application.routes.draw do
     resources :items
   end
 
+  authenticated :user do
+    root to: 'places#index', as: :authenticated_root
+  end
+
   root 'static#home'
 end
