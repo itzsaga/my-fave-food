@@ -1,5 +1,5 @@
-<% if @place.errors.any? %>
-    <% @place.errors.full_messages.each do |msg| %>
+<% if object.errors.any? %>
+    <% object.errors.full_messages.each do |msg| %>
         <div class="alert alert-danger">
           <a href="#" data-dismiss="alert" class="close">×</a>
           <ul>

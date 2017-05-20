@@ -1,4 +1,4 @@
-<%= render 'layouts/form_messages' %>
+<%= render 'layouts/form_messages', object: @item %>
 <%= form_for ([@place, @item]) do |f| %>
   <%#= f.hidden_field :place_ids %>
 
