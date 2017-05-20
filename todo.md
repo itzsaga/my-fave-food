@@ -23,12 +23,14 @@
   - [x] Add "Name"
   - Place Create
   - [x] Working form
-  - [ ] Add error messages
+  - [x] Add error messages
   - [ ] Error messages for nested if partially filled in
   - Place Edit
   - [x] Working form
-  - [ ] Add error messages
+  - [x] Add error messages
   - [ ] Error messages for nested if partially filled in
+  - [ ] Include delete
+  - [ ] Delete destroys all associated items
   - Item Create
   - [ ] _Need_
   - Item Edit
