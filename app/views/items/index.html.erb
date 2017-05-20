@@ -1,0 +1,2 @@
+<h1>Your Items for <%= @place.name %>:</h1>
+<%= render(@items) || (button_to 'Add Your First Item', new_place_item_path, class: 'btn btn-primary', method: :get) %>
