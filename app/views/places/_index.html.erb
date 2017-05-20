@@ -1,6 +1,6 @@
 <% if places != [] %>
   <%= places.each do |place| %>
-    <%= link_to place.name, place_path(place) %>
+    <%= link_to place.name, place_path(place) %><br/>
   <% end %>
 <% else %>
   <div><h3>You have not added any places yet.</h3></div>
