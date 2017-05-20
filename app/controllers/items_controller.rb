@@ -5,4 +5,8 @@ class ItemsController < ApplicationController
     @place = Place.find_by(id: params[:place_id])
     @items = @place.items
   end
+
+  def new
+    @item = Item.new(place_id: params[:place_id])
+  end
 end
