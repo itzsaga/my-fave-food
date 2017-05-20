@@ -7,7 +7,9 @@ class Place < ApplicationRecord
   validates :name, presence: true
 
   def items_attributes=(item)
-    self.items = Item.find_or_create_by(name: item.name)
-    self.items.update(item)
+    item.each do |key, val|
+      self.items << Item.find_or_create_by(name: val[:name], rating: val[:rating], notes: val[:notes])
+      self.items.update(val)
+    end
   end
 end

@@ -28,7 +28,7 @@
       <%= f.collection_check_boxes :item_ids, items, :id, :name %>
     </div>
 
-    <%= f.fields_for :items do |i| %>
+    <%= f.fields_for :items, place.items.build do |i| %>
 
         <div class="form-group">
           <%= i.label :name, 'New Item Name' %>
