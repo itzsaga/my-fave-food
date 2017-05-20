@@ -34,12 +34,12 @@
   - Item New
   - [x] When nested associates with correct place
   - Item Show
-  - [ ] Includes delete button
+  - [x] Includes delete button
 - **Validations**
 - [x] User model
 - [x] Place model
 - [x] Item model
 - **Others**
-- [ ] spec.md complete?
+- [x] spec.md complete?
 - [ ] check out figaro instead of dotenv
-- [ ] static items index of all items
+- [x] items index of all items
