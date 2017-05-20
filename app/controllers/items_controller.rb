@@ -29,10 +29,19 @@ class ItemsController < ApplicationController
     @item = Item.find_by(id: params[:id])
   end
 
+  def update
+    @item = Item.find_by(id: params[:id])
+    if @item.update(item_params)
+      redirect_to @item
+    else
+      render :edit
+    end
+  end
+
   private
 
   def item_params
-    params.require(:item).permit(:name, :rating, :notes, place_id:[])
+    params.require(:item).permit(:name, :rating, :notes)
   end
 
   def find_place
