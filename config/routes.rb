@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :places do
     resources :items, only: %i[index create new edit]
   end
-  resources :items, only: %i[show edit update]
+  resources :items
 
   authenticated :user do
     root to: 'places#index', as: :authenticated_root

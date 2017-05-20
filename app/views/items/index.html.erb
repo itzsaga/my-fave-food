@@ -1,8 +1,13 @@
-<h1>Your Items for <%= @place.name %>:</h1>
+<% if @place %>
+  <h1>Your Items for <%= @place.name %>:</h1>
+<% else %>
+  <h1>All of Your Items:</h1>
+<% end %>
+
 <% if @items != [] %>
   <%= render(@items) %>
-  <div><%= button_to 'Add More Items', new_place_item_path, class: 'btn btn-primary', method: :get %></div>
+  <div><%= button_to 'Add More Items', new_place_item_path, class: 'btn btn-primary', method: :get if @place %></div>
 <% else %>
   <div><h3>You have not added any items yet.</h3></div>
-  <div><%= button_to 'Add Your First Item', new_place_item_path, class: 'btn btn-primary', method: :get %></div>
+  <div><%= button_to 'Add Your First Item', new_place_item_path, class: 'btn btn-primary', method: :get if @place %></div>
 <% end %>

@@ -1,9 +1,14 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!
   before_action :find_place, only: %i[index new create]
+  before_action :current_item, only: %i[show edit update destroy]
 
   def index
-    @items = @place.items
+    if params[:place_id]
+      @items = @place.items
+    else
+      @items = Item.all
+    end
   end
 
   def new
@@ -22,20 +27,26 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find_by(id: params[:id])
     @places = @item.places
   end
 
   def edit
-    @item = Item.find_by(id: params[:id])
   end
 
   def update
-    @item = Item.find_by(id: params[:id])
     if @item.update(item_params)
       redirect_to @item
     else
       render :edit
+    end
+  end
+
+  def destroy
+    name = @item.name
+    if @item.delete
+      redirect_to items_path, notice: "#{name} deleted successfully."
+    else
+      render :show
     end
   end
 
@@ -47,5 +58,9 @@ class ItemsController < ApplicationController
 
   def find_place
     @place = Place.find_by(id: params[:place_id])
+  end
+
+  def current_item
+    @item = Item.find_by(id: params[:id])
   end
 end
