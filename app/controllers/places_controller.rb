@@ -12,8 +12,8 @@ class PlacesController < ApplicationController
   end
 
   def create
-    binding.pry
     @place = Place.new(place_params)
+    @items = Item.all
     if @place.save
       redirect_to @place
     else
