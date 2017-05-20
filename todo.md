@@ -35,3 +35,4 @@
 - [x] Item model
 - **Others**
 - [ ] spec.md complete?
+- [ ] check out figaro instead of dotenv
