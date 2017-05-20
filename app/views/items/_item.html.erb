@@ -1,5 +1,5 @@
 <ul>
-  <li><strong><%= item.name %></strong></li>
+  <li><strong><%= item.name %> - <%= link_to 'Edit', edit_place_item_path(item) %></strong></li>
   <ul>
     <li><%= item.rating %></li>
     <li><%= item.notes %></li>
