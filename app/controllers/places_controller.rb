@@ -30,6 +30,16 @@ class PlacesController < ApplicationController
     end
   end
 
+  def edit
+    if @place = Place.find_by(id: params[:id])
+      render :edit
+    else
+      redirect_to places_path
+    end
+  end
+
+  private
+
   def place_params
     params.require(:place).permit(:name, :address, :city, :state, :zip_code, :user_id, item_ids:[], items_attributes: [:name, :rating, :notes])
   end
