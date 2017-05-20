@@ -22,9 +22,13 @@
   - User Edit:
   - [x] Add "Name"
   - Place Create
-  - [ ] _Need_
+  - [x] Working form
+  - [ ] Add error messages
+  - [ ] Error messages for nested if partially filled in
   - Place Edit
-  - [ ] _Need_
+  - [x] Working form
+  - [ ] Add error messages
+  - [ ] Error messages for nested if partially filled in
   - Item Create
   - [ ] _Need_
   - Item Edit
