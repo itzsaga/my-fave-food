@@ -1,20 +1,18 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!
+  before_action :find_place, only: %i[index new create]
 
   def index
-    @place = Place.find_by(id: params[:place_id])
     @items = @place.items
   end
 
   def new
-    @place = Place.find_by(id: params[:place_id])
     @item = @place.items.build
   end
 
   def create
     @item = Item.new(item_params)
     @item.place_ids = params[:place_id]
-    @place = Place.find_by(id: params[:place_id])
     if @item.save
       redirect_to @item
     else
@@ -31,5 +29,9 @@ class ItemsController < ApplicationController
 
   def item_params
     params.require(:item).permit(:name, :rating, :notes, place_id:[])
+  end
+
+  def find_place
+    @place = Place.find_by(id: params[:place_id])
   end
 end
