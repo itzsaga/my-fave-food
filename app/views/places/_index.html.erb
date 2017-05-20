@@ -1,7 +1,10 @@
 <% if places != [] %>
-  <%= places.each do |place| %>
-    <%= link_to place.name, place_path(place) %><br/>
+  <ul>
+  <% places.each do |place| %>
+    <li><%= link_to place.name, place_path(place) %> - <%= link_to 'Edit', edit_place_path(place) %></li>
   <% end %>
+  </ul>
+  <div><%= button_to 'Add More Places', new_place_path, class: 'btn btn-primary', method: :get %></div>
 <% else %>
   <div><h3>You have not added any places yet.</h3></div>
   <div><%= button_to 'Add Your First Place', new_place_path, class: 'btn btn-primary', method: :get %></div>
