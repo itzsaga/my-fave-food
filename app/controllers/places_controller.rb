@@ -1,7 +1,7 @@
 class PlacesController < ApplicationController
   before_action :authenticate_user!
   before_action :all_items, only: %i[new create edit update]
-  before_action :current_place, only: [:update]
+  before_action :current_place, only: %i[update destroy]
 
   def index
     @places = Place.all
@@ -45,6 +45,16 @@ class PlacesController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    name = @place.name
+    if @place.delete
+      redirect_to places_path, notice: "#{name} deleted successfully."
+    else
+      render :show
+    end
+
   end
 
   private

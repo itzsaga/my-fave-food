@@ -30,8 +30,7 @@
   - [x] Add error messages
   - [ ] Error messages for nested if partially filled in
   - Place Show
-  - [ ] Includes delete button
-  - [ ] Delete destroys all associated items
+  - [x] Includes delete button
   - Item New
   - [x] When nested associates with correct place
   - Item Show

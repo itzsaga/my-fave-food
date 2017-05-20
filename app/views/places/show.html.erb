@@ -1,4 +1,4 @@
-<h1><%= @place.name %> - <%= link_to 'Edit', edit_place_path(@place) %></h1>
+<h1><%= @place.name %> - <%= link_to 'Edit', edit_place_path(@place) %> - <%= link_to 'Delete', place_path(@place), method: :delete, data: { confirm: 'Are you sure?' } %></h1>
 <p>Address: <%= @place.address == '' ? 'No Address Found' : @place.address %></p>
 <p>City: <%= @place.city == '' ? 'No City Found' : @place.city %></p>
 <p>State: <%= @place.state == '' ? 'No State Found' : @place.state %></p>
