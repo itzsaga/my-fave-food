@@ -1,6 +1,6 @@
 <%= render 'layouts/form_messages', object: place %>
 <%= form_for place do |f| %>
-    <%= hidden_field(:place, :user_id, value: current_user.id) %>
+    <%= f.hidden_field :user_id %>
 
     <div class="form-group">
       <%= f.label :name %>

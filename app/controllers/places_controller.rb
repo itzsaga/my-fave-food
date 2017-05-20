@@ -8,7 +8,7 @@ class PlacesController < ApplicationController
   end
 
   def new
-    @place = Place.new
+    @place = Place.new(user_id: current_user.id)
     @place.items.build
   end
 
