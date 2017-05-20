@@ -1,4 +1,6 @@
 <%= form_for place do |f| %>
+    <%= hidden_field_tag(:user_id, current_user.id) %>
+
     <div class="form-group">
       <%= f.label :name %>
       <%= f.text_field :name, class: 'form-control' %>
@@ -16,7 +18,7 @@
 
     <div class="form-group">
       <%= f.label :state %>
-      <%= select_tag :state, options_for_select(us_states), class: 'form-control' %>
+      <%= f.collection_select :state, us_states, :last, :first, class: 'form-control' %>
     </div>
 
     <div class="form-group">

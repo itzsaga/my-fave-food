@@ -1,6 +1,6 @@
 class PlacesController < ApplicationController
   before_action :authenticate_user!
-  
+
   def index
     @places = Place.all
   end
@@ -12,6 +12,7 @@ class PlacesController < ApplicationController
   end
 
   def create
+    binding.pry
     @place = Place.new(place_params)
     if @place.save
       redirect_to @place
@@ -29,6 +30,6 @@ class PlacesController < ApplicationController
   end
 
   def place_params
-    params.require(:place).permit(:name, :address, :city, :state, :zip_code, item_ids:[], items_attributes: [:name, :rating, :notes])
+    params.require(:place).permit(:name, :address, :city, :state, :zip_code, :user_id, item_ids:[], items_attributes: [:name, :rating, :notes])
   end
 end
