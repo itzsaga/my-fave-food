@@ -54,7 +54,6 @@ class PlacesController < ApplicationController
     else
       render :show
     end
-
   end
 
   private
