@@ -23,6 +23,7 @@ class PlacesController < ApplicationController
 
   def show
     if @place = Place.find_by(id: params[:id])
+      @items = @place.items
       render :show
     else
       redirect_to places_path

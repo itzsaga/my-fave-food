@@ -4,3 +4,10 @@
 <p>City: <%= @place.city == '' ? 'No City Found' : @place.city %></p>
 <p>State: <%= @place.state == '' ? 'No State Found' : @place.state %></p>
 <p>Zip Code: <%= @place.zip_code == nil ? 'No Zip Code Found' : @place.zip_code %></p>
+<h2>Your Items:</h2>
+<% if @items == [] %>
+  <div><h3>You have not added any items yet.</h3></div>
+  <!--<div><%#= button_to 'Add Your First Item', new_place_path, class: 'btn btn-primary', method: :get %></div>-->
+<% else %>
+  <%= render(@items) %>
+<% end %>
