@@ -1,3 +1,15 @@
+<% if @place.errors.any? %>
+  <% @place.errors.full_messages.each do |msg| %>
+    <div class="alert alert-danger">
+      <a href="#" data-dismiss="alert" class="close">×</a>
+      <ul>
+        <li>
+          <%= msg %>
+        </li>
+      </ul>
+    </div>
+  <% end %>
+<% end %>
 <%= form_for place do |f| %>
     <%= hidden_field(:place, :user_id, value: current_user.id) %>
 
