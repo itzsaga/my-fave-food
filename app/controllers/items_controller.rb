@@ -7,7 +7,8 @@ class ItemsController < ApplicationController
   end
 
   def new
-    @item = Item.new(place_id: params[:place_id])
+    @place = Place.find_by(id: params[:place_id])
+    @item = @place.items.build
   end
 
   private
