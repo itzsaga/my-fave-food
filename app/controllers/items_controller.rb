@@ -23,6 +23,7 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find_by(id: params[:id])
+    @places = @item.places
   end
 
   def edit

@@ -1,1 +1,5 @@
-<%= @item.name %>
+<h1><%= @item.name %> - <%= link_to 'Edit', edit_item_path(@item) %></h1>
+<p>Rating: <%= @item.rating %></p>
+<p>Notes: <%= @item.notes %></p>
+<h3>You can get this at:</h3>
+<ul><%= render(@places) || "You haven't added this to any places." %></ul>
