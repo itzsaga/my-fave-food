@@ -4,7 +4,7 @@ class PlacesController < ApplicationController
   before_action :current_place, only: %i[update destroy]
 
   def index
-    @places = Place.all
+    @places = current_user.places
   end
 
   def new
