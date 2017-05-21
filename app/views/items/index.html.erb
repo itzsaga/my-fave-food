@@ -4,7 +4,7 @@
   <h1>All of Your Items:</h1>
 <% end %>
 
-<% if @items != [] %>
+<% if @items != nil %>
   <%= render(@items) %>
   <div><%= button_to 'Add More Items', new_place_item_path, class: 'btn btn-primary', method: :get if @place %></div>
 <% else %>

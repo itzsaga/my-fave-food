@@ -7,7 +7,7 @@ class ItemsController < ApplicationController
     if params[:place_id]
       @items = @place.items
     else
-      @items = Item.all
+      @items = current_user.places.try(:items)
     end
   end
 
