@@ -63,7 +63,7 @@ class PlacesController < ApplicationController
   end
 
   def all_items
-    @items = Item.all
+    @items = current_user.items
   end
 
   def current_place
