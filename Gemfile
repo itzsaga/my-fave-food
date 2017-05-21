@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'dotenv-rails', groups: [:development, :test]
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'devise'
+gem 'figaro'
 gem 'font-awesome-rails'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
@@ -14,11 +14,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
 group :development, :test do
-  gem 'byebug'
   gem 'database_cleaner'
   gem 'faker'
   gem 'pry'
