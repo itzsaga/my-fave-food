@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'dotenv-rails', groups: [:development, :test]
+# gem 'dotenv-rails', groups: [:development, :test]
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'devise'
 gem 'figaro'
