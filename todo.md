@@ -14,7 +14,7 @@
   - User name dropdown when logged in:
     - [ ] My profile
     - [ ] Edit
-    - [ ] Log out
+    - [x] Log out
     - [ ] Align right
 - **Forms**
   - User Sign up
@@ -41,5 +41,5 @@
 - [x] Item model
 - **Others**
 - [x] spec.md complete?
-- [ ] check out figaro instead of dotenv
+- [x] check out figaro instead of dotenv
 - [x] items index of all items
