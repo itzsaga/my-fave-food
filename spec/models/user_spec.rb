@@ -18,13 +18,17 @@ RSpec.describe User, type: :model do
   end
 
   it 'has many places' do
-    @user.places.create
+    @user.places.create(name: Faker::Company.name)
     expect(@user.places.count).to eq(1)
   end
 
   it 'has many items through places' do
-    @user.places.create
-    @user.places.last.items.create
+    @user.places.create(name: Faker::Company.name)
+    @user.places.last.items.create(
+        name: Faker::Food.ingredient,
+        rating: rand(1..5),
+        notes: Faker::Hipster.sentence
+        )
     expect(@user.items.count).to eq(1)
   end
 
