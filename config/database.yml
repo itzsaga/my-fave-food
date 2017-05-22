@@ -11,7 +11,7 @@ development:
 
 test:
   <<: *default
-  database: my-fave-food_test
+  database: travis_ci_test
 
 production:
   <<: *default
