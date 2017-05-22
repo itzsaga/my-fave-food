@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'coveralls', require: false
 gem 'devise'
 gem 'figaro'
 gem 'font-awesome-rails'
