@@ -43,3 +43,4 @@
 - [x] spec.md complete?
 - [x] check out figaro instead of dotenv
 - [x] items index of all items
+- [ ] losing new item data in place create when place valuations fail
