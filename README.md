@@ -1,6 +1,6 @@
 # My Favorite Eats
 
-[![Build Status](https://travis-ci.org/itzsaga/my-fave-food.svg?branch=master)](https://travis-ci.org/itzsaga/my-fave-food) [![Coverage Status](https://coveralls.io/repos/github/itzsaga/my-fave-food/badge.svg?branch=master)](https://coveralls.io/github/itzsaga/my-fave-food?branch=master) [![Dependency Status](https://dependencyci.com/github/itzsaga/my-fave-food/badge)](https://dependencyci.com/github/itzsaga/my-fave-food)
+[![Code Climate](https://codeclimate.com/github/itzsaga/my-fave-food/badges/gpa.svg)](https://codeclimate.com/github/itzsaga/my-fave-food) [![Build Status](https://travis-ci.org/itzsaga/my-fave-food.svg?branch=master)](https://travis-ci.org/itzsaga/my-fave-food) [![Dependency Status](https://dependencyci.com/github/itzsaga/my-fave-food/badge)](https://dependencyci.com/github/itzsaga/my-fave-food)
 
 This app will allow you to keep a record of your favorite items (food & beverage) at any place you choose.
 
