@@ -7,3 +7,10 @@ services:
 
 before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
+
+addons:
+  code_climate:
+    repo_token: 15bbce267be0bad023cf9d63998eb35a10f03ade6674f7f0ae373f95aadce87e
+
+after_success:
+  - bundle exec codeclimate-test-reporter

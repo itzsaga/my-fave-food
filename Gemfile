@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'bootstrap', '~> 4.0.0.alpha6'
-gem 'coveralls', require: false
 gem 'devise'
 gem 'figaro'
 gem 'font-awesome-rails'
@@ -29,3 +28,7 @@ group :development do
   gem 'web-console', '>= 3.3.0'
 end
 
+group :test do
+  gem "simplecov"
+  gem "codeclimate-test-reporter", "~> 1.0.0"
+end
