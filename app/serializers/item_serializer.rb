@@ -1,3 +1,4 @@
 class ItemSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name, :rating, :notes
+  has_many :places
 end
