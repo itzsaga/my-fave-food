@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
+gem 'active_model_serializers'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'devise'
 gem 'figaro'
 gem 'font-awesome-rails'
-gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'omniauth-facebook'
 gem 'pg', '~> 0.18'
