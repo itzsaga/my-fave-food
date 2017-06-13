@@ -6,13 +6,11 @@ gem 'devise'
 gem 'figaro'
 gem 'font-awesome-rails'
 gem 'jquery-rails'
-gem 'jquery-turbolinks'
 gem 'omniauth-facebook'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.0'
 gem 'rails', '~> 5.0.3'
 gem 'sass-rails', '~> 5.0'
-gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
