@@ -24,7 +24,10 @@ class PlacesController < ApplicationController
   def show
     if current_place
       @items = @place.items
-      render :show
+      respond_to do |f|
+        f.html { render :show }
+        f.json { render json: @place }
+      end
     else
       redirect_to places_path
     end
