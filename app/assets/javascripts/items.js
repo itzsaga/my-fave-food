@@ -1,2 +1,8 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
+'use strict'
+
+$(() => {
+  let path = $(location).attr('href')
+  $.getJSON(path, function (data) {
+    console.log(data)
+  })
+})

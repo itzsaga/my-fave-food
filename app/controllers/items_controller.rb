@@ -7,7 +7,6 @@ class ItemsController < ApplicationController
     if params[:place_id]
       @items = @place.items
     else
-      # binding.pry
       @items = current_user.try(:items)
     end
   end
@@ -29,6 +28,10 @@ class ItemsController < ApplicationController
 
   def show
     @places = @item.places
+    respond_to do |f|
+      f.html { render :show }
+      f.json { render json: @item }
+    end
   end
 
   def edit
