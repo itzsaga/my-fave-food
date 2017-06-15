@@ -1,6 +1,6 @@
 'use strict'
 
-$(document).ready(function () {
+$(() => {
   let path = $(location).attr('href')
   $.getJSON(path, function (data) {
     if (data.items.length > 0) {
