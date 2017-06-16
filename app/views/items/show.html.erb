@@ -1,6 +1,8 @@
-<h1><%= @item.name %> - <%= link_to 'Edit', edit_item_path(@item) %> - <%= link_to 'Delete', item_path(@item), method: :delete, data: { confirm: 'Are you sure?' } %></h1>
-<p>Rating: <%= @item.rating %></p>
-<p>Notes: <%= @item.notes %></p>
+<a href="#" class="js-next" data-id="<%=@item.id%>">Next Item</a>
+<h1 id="name"><%= @item.name %> - <%= link_to 'Edit', edit_item_path(@item) %> - <%= link_to 'Delete', item_path(@item), method: :delete, data: { confirm: 'Are you sure?' } %></h1>
+<p id="rating">Rating: <%= @item.rating %></p>
+<p id="notes">Notes: <%= @item.notes %></p>
 <h3>You can get this at:</h3>
+<div id="availableAt"></div>
 <ul><%= render(@places) || "You haven't added this to any places." %></ul>
 <%= javascript_include_tag "items" %>
