@@ -8,6 +8,10 @@ class ItemsController < ApplicationController
       @items = @place.items
     else
       @items = current_user.try(:items)
+      respond_to do |f|
+        f.html { render :index }
+        f.json { render json: @items }
+      end
     end
   end
 
