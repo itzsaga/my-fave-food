@@ -3,10 +3,6 @@
 let itemsValues
 
 $(() => {
-  let path = $(location).attr('href')
-  $.getJSON(path, function (data) {
-    console.log(data)
-  })
   $.getJSON('/items.json', function (data) {
     itemsValues = $.map(data, function (e) {
       return e.id
