@@ -23,7 +23,7 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     @item.place_ids = params[:place_id]
     if @item.save
-      redirect_to @item
+      render json: @item, status: 201
     else
       render :new
     end

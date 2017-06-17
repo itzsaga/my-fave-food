@@ -8,6 +8,18 @@ $(() => {
       return e.id
     })
   })
+  $('form').submit(function (e) {
+    e.preventDefault()
+    let values = $(this).serialize()
+    let posting = $.post('/items', values)
+    posting.done(function (data) {
+      $('#name').html(`${data['name']} - 
+        <a href="/items/${data['id']}/edit">Edit</a> - 
+        <a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/items/${data['id']}">Delete</a>`)
+      $('#rating').html(`Rating: ${data['rating']}`)
+      $('#notes').html(`Notes: ${data['notes']}`)
+    })
+  })
 })
 
 $('.js-next').on('click', function() {
