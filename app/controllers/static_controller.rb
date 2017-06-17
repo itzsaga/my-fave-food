@@ -6,5 +6,9 @@ class StaticController < ApplicationController
 
   def favorites
     @favorites = current_user.favorite_items
+    respond_to do |f|
+      f.html { render :favorites }
+      f.json { render json: @favorites }
+    end
   end
 end
