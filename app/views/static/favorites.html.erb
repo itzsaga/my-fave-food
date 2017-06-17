@@ -1,7 +1,4 @@
 <h1>Your Favorite Items:</h1>
 <h5 class="text-muted">(Rated a perfect 5)</h5>
-<ul>
-  <% @favorites.each do |fave| %>
-    <li><%= link_to fave.name, item_path(fave) %></li>
-  <% end %>
-</ul>
+<ul id="favorites"></ul>
+<%= javascript_include_tag 'favorites' %>
